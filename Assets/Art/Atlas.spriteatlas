@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 9c8ed467922fd65419276589d7b8e10a, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 88d24e30fa484c34092d40235a5f0d0a, type: 3}
+  - {fileID: 21300000, guid: 190c0a50d19b5a04fa54b3281dfc727d, type: 3}
+  - {fileID: 21300000, guid: f55dc20274322cd40bf8967d4933578f, type: 3}
+  - {fileID: 21300000, guid: b106e2b27f528a24793ee6d3b5385d8b, type: 3}
+  - {fileID: 21300000, guid: e5fc89b4f2a5ed6408251d4ba25548db, type: 3}
+  - {fileID: 21300000, guid: 69022db4722b7ce42b9a59a86ceae525, type: 3}
+  - {fileID: 21300000, guid: 26e1c056324ed77459d700f83dba2149, type: 3}
+  - {fileID: 21300000, guid: d64bf4b73324cd8459419b16bea903cf, type: 3}
+  - {fileID: 21300000, guid: 27e427c703b19ab41b07b9eb2e5200a2, type: 3}
+  - {fileID: 21300000, guid: 0f5777c7acdb9a5489eaa45179786084, type: 3}
+  - {fileID: 21300000, guid: 4f9e61d8a91ac8a4d80560d81dc8ca92, type: 3}
+  - {fileID: 21300000, guid: 44d1623b72100dc4491dfc04372dc23b, type: 3}
+  - {fileID: 21300000, guid: a647bd8c9efbbd04298e68e6ba90d4f6, type: 3}
+  - {fileID: 21300000, guid: 7aff154dcd2943d4f971dbec4b5c8be5, type: 3}
+  - {fileID: 21300000, guid: d1fda17fa23ccf541b97d84d702c5e67, type: 3}
+  - {fileID: 21300000, guid: f2244cbf7ba06fe428b15bcecc4d1dc2, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - White Golf
+  - Electric Car
+  - x-mark-3-xxl
+  - background
+  - Green Car
+  - Lambo
+  - plus-512
+  - Dollar
+  - arrow
+  - background-1_0
+  - Cone
+  - cross
+  - settings
+  - Yellow Car
+  - Motorcycle
+  - Blue Car
+  m_RenderDataMap: {}
+  m_Tag: Atlas
+  m_IsVariant: 0
