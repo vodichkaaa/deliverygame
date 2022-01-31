@@ -16,23 +16,16 @@ public static class Lighting2D {
 	}
 
 	// Buffer Settings
-	static public BufferPreset[] BufferPresets {
-		get => Profile.bufferPresets.list;
-	}
+	static public BufferPreset[] BufferPresets => Profile.bufferPresets.list;
 
 	// Common Settings
-	static public LightingSettings.QualitySettings QualitySettings {
-		get => Profile.qualitySettings;
-	}
+	static public LightingSettings.QualitySettings QualitySettings => Profile.qualitySettings;
+
 	// Day Settings
-	static public DayLightingSettings DayLightingSettings {
-		get => Profile.dayLightingSettings;
-	}
+	static public DayLightingSettings DayLightingSettings => Profile.dayLightingSettings;
 
 	// Fog of War
-	static public LightingSettings.FogOfWar FogOfWar {
-		get => Profile.fogOfWar;
-	}
+	static public LightingSettings.FogOfWar FogOfWar => Profile.fogOfWar;
 
 	static public RenderingMode RenderingMode {
 		get {
@@ -44,21 +37,17 @@ public static class Lighting2D {
 		}
 	}
 
-	static public CoreAxis CoreAxis {
-		get {
-			return(Profile.qualitySettings.coreAxis);
-		}
-	}
+	static public CoreAxis CoreAxis => (Profile.qualitySettings.coreAxis);
 
 	// Set & Get API
 	static public Color DarknessColor {
-		get { return BufferPresets[0].darknessColor; }
-		set { BufferPresets[0].darknessColor = value; }
+		get => BufferPresets[0].darknessColor;
+		set => BufferPresets[0].darknessColor = value;
 	}
 
 	static public float Resolution {
-		get { return BufferPresets[0].lightingResolution; }
-		set { BufferPresets[0].lightingResolution = value; }
+		get => BufferPresets[0].lightingResolution;
+		set => BufferPresets[0].lightingResolution = value;
 	}
 
 	// Methods

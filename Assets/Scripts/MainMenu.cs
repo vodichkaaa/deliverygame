@@ -4,6 +4,8 @@ public class MainMenu : MonoBehaviour
 {
     public void Awake()
     {
+        Application.targetFrameRate = 60;
+        
         GameDataManager.LoadPlayerData();
         GameDataManager.LoadCharactersShopData();
     }

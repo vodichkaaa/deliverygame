@@ -8,7 +8,8 @@ namespace Polygon2DTriangulation
 	public class PointSet : Point2DList, ITriangulatable, IEnumerable<TriangulationPoint>, IList<TriangulationPoint>
 	{
 		protected Dictionary<uint, TriangulationPoint> mPointMap = new Dictionary<uint, TriangulationPoint>();
-		public IList<TriangulationPoint> Points { get { return this; } private set { } }
+		public IList<TriangulationPoint> Points { get => this;
+			private set { } }
 		public IList<DelaunayTriangle> Triangles { get; private set; }
 
 		public string FileName { get; set; }
@@ -17,20 +18,22 @@ namespace Polygon2DTriangulation
 		public float DisplayRotate { get; set; }
 
 		protected double mPrecision = TriangulationPoint.kVertexCodeDefaultPrecision;
-		public double Precision { get { return mPrecision; } set { mPrecision = value; } }
+		public double Precision { get => mPrecision;
+			set => mPrecision = value;
+		}
 
-		public double MinX { get { return mBoundingBox.MinX; } }
-		public double MaxX { get { return mBoundingBox.MaxX; } }
-		public double MinY { get { return mBoundingBox.MinY; } }
-		public double MaxY { get { return mBoundingBox.MaxY; } }
-		public Rect2D Bounds { get { return mBoundingBox; } }
+		public double MinX => mBoundingBox.MinX;
+		public double MaxX => mBoundingBox.MaxX;
+		public double MinY => mBoundingBox.MinY;
+		public double MaxY => mBoundingBox.MaxY;
+		public Rect2D Bounds => mBoundingBox;
 
-		public virtual TriangulationMode TriangulationMode { get { return TriangulationMode.Unconstrained; } }
+		public virtual TriangulationMode TriangulationMode => TriangulationMode.Unconstrained;
 
 		public new TriangulationPoint this[int index]
 		{
-			get { return mPoints[index] as TriangulationPoint; }
-			set { mPoints[index] = value; }
+			get => mPoints[index] as TriangulationPoint;
+			set => mPoints[index] = value;
 		}
 
 		public PointSet(List<TriangulationPoint> bounds)
@@ -211,7 +214,7 @@ namespace Polygon2DTriangulation
 		protected Dictionary<uint, TriangulationConstraint> mConstraintMap = new Dictionary<uint, TriangulationConstraint>();
 		protected List<Contour> mHoles = new List<Contour>();
 
-		public override TriangulationMode TriangulationMode { get { return TriangulationMode.Constrained; } }
+		public override TriangulationMode TriangulationMode => TriangulationMode.Constrained;
 
 		public ConstrainedPointSet(List<TriangulationPoint> bounds) : base(bounds)
 		{

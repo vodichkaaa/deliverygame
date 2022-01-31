@@ -39,10 +39,8 @@ namespace LightingSettings {
 				return(profile);
 			}
 
-			set {
-				profile = value;
-			}
-		}
+			set => profile = value;
+        }
 
 		public ProjectSettings() {
 			chunks = new Chunks();

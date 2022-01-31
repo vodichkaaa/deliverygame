@@ -35,8 +35,12 @@ namespace Polygon2DTriangulation
 		protected Point2D mP = null;
 		protected Point2D mQ = null;
 
-		public Point2D EdgeStart { get { return mP; } set { mP= value;} }
-		public Point2D EdgeEnd { get { return mQ; } set { mQ = value; } }
+		public Point2D EdgeStart { get => mP;
+			set => mP= value;
+		}
+		public Point2D EdgeEnd { get => mQ;
+			set => mQ = value;
+		}
 
 		public Edge() { mP = null; mQ = null; }
 		public Edge(Point2D edgeStart, Point2D edgeEnd)
@@ -52,7 +56,7 @@ namespace Polygon2DTriangulation
 
 		public TriangulationPoint P
 		{
-			get { return mP as TriangulationPoint; } 
+			get => mP as TriangulationPoint;
 			set  {
 				if (value != null && mP != value)
 				{
@@ -63,7 +67,7 @@ namespace Polygon2DTriangulation
 		}
 
 		public TriangulationPoint Q {
-			get { return mQ as TriangulationPoint; }
+			get => mQ as TriangulationPoint;
 			set {
 				if (value != null && mQ != value)
 				{
@@ -72,7 +76,7 @@ namespace Polygon2DTriangulation
 				}
 			}
 		}
-		public uint ConstraintCode { get { return mContraintCode; } }
+		public uint ConstraintCode => mContraintCode;
 
 		public TriangulationConstraint(TriangulationPoint p1, TriangulationPoint p2)
 		{
@@ -153,7 +157,7 @@ namespace Polygon2DTriangulation
 		}
 
 		public virtual bool IsDebugEnabled { get; protected set; }
-		public DTSweepDebugContext DTDebugContext { get { return DebugContext as DTSweepDebugContext; } }
+		public DTSweepDebugContext DTDebugContext => DebugContext as DTSweepDebugContext;
 	}
 
 	public abstract class TriangulationDebugContext
@@ -174,7 +178,7 @@ namespace Polygon2DTriangulation
 
 		public override double X
 		{
-			get { return mX; }
+			get => mX;
 			set {
 				if (value != mX)
 				{
@@ -185,7 +189,7 @@ namespace Polygon2DTriangulation
 		}
 		public override double Y
 		{
-			get { return mY; }
+			get => mY;
 			set {
 				if (value != mY)
 				{
@@ -196,10 +200,10 @@ namespace Polygon2DTriangulation
 		}
 
 		protected uint mVertexCode = 0;
-		public uint VertexCode { get { return mVertexCode; } }
+		public uint VertexCode => mVertexCode;
 
 		public List<DTSweepConstraint> Edges { get; private set; }
-		public bool HasEdges { get { return Edges != null; } }
+		public bool HasEdges => Edges != null;
 
 		public TriangulationPoint(double x, double y) : this(x, y, kVertexCodeDefaultPrecision) {}
 
@@ -302,7 +306,7 @@ namespace Polygon2DTriangulation
 
 		void IDisposable.Dispose() { }
 
-		Object IEnumerator.Current { get { return Current; } }
+		Object IEnumerator.Current => Current;
 
 		public TriangulationPoint Current
 		{

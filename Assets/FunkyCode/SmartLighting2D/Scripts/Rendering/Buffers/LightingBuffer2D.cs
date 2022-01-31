@@ -19,9 +19,7 @@ public class LightingBuffer2D {
 		}
 	}
 
-	public bool Free {
-		get => light == null;
-	}
+	public bool Free => light == null;
 
 	public LightTexture renderTexture;
 

@@ -51,11 +51,9 @@ namespace LightTilemapCollider {
 			return(MapType.UnityRectangle);
 		}
 	
-        public TilemapProperties Properties {
-            get => properties;
-        }
+        public TilemapProperties Properties => properties;
 
-		virtual public bool IsPhysicsShape() {
+        virtual public bool IsPhysicsShape() {
 			return(false);
 		}
 

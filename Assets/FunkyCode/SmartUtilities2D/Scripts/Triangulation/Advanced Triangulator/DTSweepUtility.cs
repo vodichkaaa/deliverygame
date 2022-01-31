@@ -998,8 +998,8 @@ namespace Polygon2DTriangulation
 			Value = point.X;
 		}
 
-		public bool HasNext { get { return Next != null; } }
-		public bool HasPrev { get { return Prev != null; } }
+		public bool HasNext => Next != null;
+		public bool HasPrev => Prev != null;
 	}
 
 	public class DTSweepBasin
@@ -1017,15 +1017,20 @@ namespace Polygon2DTriangulation
 
 	public class DTSweepDebugContext : TriangulationDebugContext
 	{
-		public DelaunayTriangle PrimaryTriangle { get { return _primaryTriangle; } set { _primaryTriangle = value; _tcx.Update("set PrimaryTriangle"); } }
-		public DelaunayTriangle SecondaryTriangle { get { return _secondaryTriangle; } set { _secondaryTriangle = value; _tcx.Update("set SecondaryTriangle"); } }
-		public TriangulationPoint ActivePoint { get { return _activePoint; } set { _activePoint = value; _tcx.Update("set ActivePoint"); } }
-		public AdvancingFrontNode ActiveNode { get { return _activeNode; } set { _activeNode = value; _tcx.Update("set ActiveNode"); } }
-		public DTSweepConstraint ActiveConstraint { get { return _activeConstraint; } set { _activeConstraint = value; _tcx.Update("set ActiveConstraint"); } }
+		public DelaunayTriangle PrimaryTriangle { get => _primaryTriangle;
+			set { _primaryTriangle = value; _tcx.Update("set PrimaryTriangle"); } }
+		public DelaunayTriangle SecondaryTriangle { get => _secondaryTriangle;
+			set { _secondaryTriangle = value; _tcx.Update("set SecondaryTriangle"); } }
+		public TriangulationPoint ActivePoint { get => _activePoint;
+			set { _activePoint = value; _tcx.Update("set ActivePoint"); } }
+		public AdvancingFrontNode ActiveNode { get => _activeNode;
+			set { _activeNode = value; _tcx.Update("set ActiveNode"); } }
+		public DTSweepConstraint ActiveConstraint { get => _activeConstraint;
+			set { _activeConstraint = value; _tcx.Update("set ActiveConstraint"); } }
 
 		public DTSweepDebugContext(DTSweepContext tcx) : base(tcx) { }
 
-		public bool IsDebugContext { get { return true; } }
+		public bool IsDebugContext => true;
 
 		public override void Clear()
 		{
@@ -1093,7 +1098,7 @@ namespace Polygon2DTriangulation
 
 		private DTSweepPointComparator _comparator = new DTSweepPointComparator();
 
-		public override TriangulationAlgorithm Algorithm { get { return TriangulationAlgorithm.DTSweep; } }
+		public override TriangulationAlgorithm Algorithm => TriangulationAlgorithm.DTSweep;
 
 		public DTSweepContext()
 		{
@@ -1102,7 +1107,7 @@ namespace Polygon2DTriangulation
 
 		public override bool IsDebugEnabled
 		{
-			get { return base.IsDebugEnabled; }
+			get => base.IsDebugEnabled;
 			protected set {
 				if (value && DebugContext == null)
 					DebugContext = new DTSweepDebugContext(this);

@@ -40,11 +40,12 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 0
-      enableAlphaDilation: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 9c8ed467922fd65419276589d7b8e10a, type: 3}
+    - {fileID: 102900000, guid: 3ebf168ee13962343bb3adf640f08c6f, type: 3}
+    totalSpriteSurfaceArea: 43834213
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -52,35 +53,93 @@ SpriteAtlas:
   m_PackedSprites:
   - {fileID: 21300000, guid: 88d24e30fa484c34092d40235a5f0d0a, type: 3}
   - {fileID: 21300000, guid: 190c0a50d19b5a04fa54b3281dfc727d, type: 3}
-  - {fileID: 21300000, guid: f55dc20274322cd40bf8967d4933578f, type: 3}
-  - {fileID: 21300000, guid: b106e2b27f528a24793ee6d3b5385d8b, type: 3}
+  - {fileID: 21300000, guid: 19d249615585e304a83271ee3a3c5f1a, type: 3}
+  - {fileID: 21300000, guid: 02e8a2918eebe4c48a0f7c1f90684338, type: 3}
+  - {fileID: 21300000, guid: 33d0cec164bf72c428277367a19f6720, type: 3}
+  - {fileID: 21300000, guid: e0820b02fbd813842a93398973047ea6, type: 3}
+  - {fileID: 21300000, guid: 328b2dc2e62137746bcbb1b206133bd9, type: 3}
+  - {fileID: 21300000, guid: 531cbee2beefa5c4fa429d942940724b, type: 3}
+  - {fileID: 21300000, guid: 91a5183335b777b4494f3df7ba3fc3cc, type: 3}
+  - {fileID: 21300000, guid: cb798143a78038b4dbd54c2ed7918def, type: 3}
+  - {fileID: 21300000, guid: 6174b473a64af664a9d4faebafa9355a, type: 3}
+  - {fileID: 21300000, guid: 60510db3efe3753439b9e64d5ba759ea, type: 3}
+  - {fileID: 21300000, guid: 505fcfc37f0b50e4fa89545d4b2fb845, type: 3}
+  - {fileID: 21300000, guid: 4210ac342264ebc4693a675265ac4038, type: 3}
   - {fileID: 21300000, guid: e5fc89b4f2a5ed6408251d4ba25548db, type: 3}
   - {fileID: 21300000, guid: 69022db4722b7ce42b9a59a86ceae525, type: 3}
-  - {fileID: 21300000, guid: 26e1c056324ed77459d700f83dba2149, type: 3}
-  - {fileID: 21300000, guid: d64bf4b73324cd8459419b16bea903cf, type: 3}
-  - {fileID: 21300000, guid: 27e427c703b19ab41b07b9eb2e5200a2, type: 3}
-  - {fileID: 21300000, guid: 0f5777c7acdb9a5489eaa45179786084, type: 3}
+  - {fileID: 21300000, guid: 9f708aa5a634bd44bb6e9a43b86be442, type: 3}
+  - {fileID: 21300000, guid: 0c78e70608cec9948b1e395e0c53fb19, type: 3}
+  - {fileID: 21300000, guid: f155d716f2bd9514a9ebd3607d6c6fa3, type: 3}
+  - {fileID: 21300000, guid: 99c3be865f873d14aa5495bd4bd391d5, type: 3}
+  - {fileID: 21300000, guid: 2096ed273b3e28e41829a70c8e8f135a, type: 3}
+  - {fileID: 21300000, guid: d5d232a7ac127c6489029dd9f024af3b, type: 3}
+  - {fileID: 21300000, guid: 5c6732d7338cc8d498cf9b9ec35271b6, type: 3}
+  - {fileID: 21300000, guid: 92fe1118f5241c940a47d7821ef6dcdb, type: 3}
+  - {fileID: 21300000, guid: 96b8cb88462315d4ebb74fbee88ddb14, type: 3}
   - {fileID: 21300000, guid: 4f9e61d8a91ac8a4d80560d81dc8ca92, type: 3}
-  - {fileID: 21300000, guid: 44d1623b72100dc4491dfc04372dc23b, type: 3}
-  - {fileID: 21300000, guid: a647bd8c9efbbd04298e68e6ba90d4f6, type: 3}
+  - {fileID: 21300000, guid: ee7da7d8e887bd54fba7ccc2813cc849, type: 3}
+  - {fileID: 21300000, guid: 1e74ba098cfba0547bed4cde845a8f20, type: 3}
+  - {fileID: 21300000, guid: 65a014690aed35246bd07aed2e50393e, type: 3}
+  - {fileID: 21300000, guid: 34df02899c07cf242898316ac83856dc, type: 3}
+  - {fileID: 21300000, guid: 7bf6719a912d6304681778cf8219b5ef, type: 3}
+  - {fileID: 21300000, guid: 4d9e093b9f5080f4ba5076e9ad397594, type: 3}
+  - {fileID: 21300000, guid: 0bd3795cca7642944ad1451ffac0f987, type: 3}
+  - {fileID: 21300000, guid: ab4e7afc52fed504ca4e0db69f6fa31f, type: 3}
+  - {fileID: 21300000, guid: fb7d3f1da6b0d1647ab2f9006dc76be6, type: 3}
   - {fileID: 21300000, guid: 7aff154dcd2943d4f971dbec4b5c8be5, type: 3}
+  - {fileID: 21300000, guid: d55f878df51316346bbccc50886a41b9, type: 3}
+  - {fileID: 21300000, guid: 1ccb7fddf71e44c4f9ab43da769c7135, type: 3}
+  - {fileID: 21300000, guid: 50b9dbfd452e1034e841cc6f8aeaabc1, type: 3}
+  - {fileID: 21300000, guid: da00471e60e0fe744b75e03ee45922fc, type: 3}
+  - {fileID: 21300000, guid: a52e135fd9542534b81fa09eeeaf4992, type: 3}
+  - {fileID: 21300000, guid: 41962d5fb2d1489468f2b38d34f77639, type: 3}
   - {fileID: 21300000, guid: d1fda17fa23ccf541b97d84d702c5e67, type: 3}
   - {fileID: 21300000, guid: f2244cbf7ba06fe428b15bcecc4d1dc2, type: 3}
   m_PackedSpriteNamesToIndex:
   - White Golf
   - Electric Car
-  - x-mark-3-xxl
-  - background
+  - GreenAICar
+  - water_seamless_texture_1809
+  - MotorcycleAI
+  - Crossroad (4)
+  - BlueAICar
+  - Cross 1
+  - Cash
+  - bg
+  - "\u041F\u0440\u044F\u043C\u043E\u0443\u0433\u043E\u043B\u044C\u043D\u0438\u043A
+    1"
+  - sand_seamless_texture_1754
+  - WhiteAIGolf
+  - Crossroad (1)
   - Green Car
   - Lambo
-  - plus-512
-  - Dollar
-  - arrow
-  - background-1_0
+  - road_asphalt_seamless_texture_573
+  - Crossroad (3)
+  - T-Crossroad
+  - BACK
+  - L-Turn
+  - ElectricAICar
+  - PLAY
+  - CarSelection
+  - "\u041F\u0440\u044F\u043C\u043E\u0443\u0433\u043E\u043B\u044C\u043D\u0438\u043A
+    2"
   - Cone
-  - cross
-  - settings
+  - Crossroad (2)
+  - Arrow 2
+  - grass_seamless_texture_1413
+  - Close
+  - "\u042D\u043B\u043B\u0438\u043F\u0441 1"
+  - YellowAICar
+  - Crossroad (5)
+  - LamboAI
+  - SHOP
   - Yellow Car
+  - Crossroad
+  - CarSelectionField
+  - VolumeBar
+  - Settings 1
+  - StrRoad_W-E
+  - ExitButton
   - Motorcycle
   - Blue Car
   m_RenderDataMap: {}

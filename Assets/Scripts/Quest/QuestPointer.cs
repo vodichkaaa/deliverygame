@@ -20,7 +20,7 @@ public class QuestPointer : MonoBehaviour
     
     private Image _pointerImage = null;
     
-    private const float BorderSize = 100f;
+    private const float BorderSize = 300f;
     
     private void Awake()
     {

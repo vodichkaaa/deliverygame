@@ -55,10 +55,7 @@ namespace UnityEditor.AI
 
         BoxBoundsHandle m_BoundsHandle = new BoxBoundsHandle();
 
-        bool editingCollider
-        {
-            get { return EditMode.editMode == EditMode.SceneViewEditMode.Collider && EditMode.IsOwner(this); }
-        }
+        bool editingCollider => EditMode.editMode == EditMode.SceneViewEditMode.Collider && EditMode.IsOwner(this);
 
         void OnEnable()
         {

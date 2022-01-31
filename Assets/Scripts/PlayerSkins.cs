@@ -7,7 +7,6 @@ public class PlayerSkins : MonoBehaviour
     
     private void Awake()
     {
-        Debug.Log("2");
         ChangePlayerSkin();
     }
 

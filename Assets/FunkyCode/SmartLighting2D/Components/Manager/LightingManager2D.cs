@@ -15,6 +15,7 @@ public class LightingManager2D : LightingMonoBehaviour {
 
 	public FogOfWarCamera[] fogOfWarCameras = new FogOfWarCamera[0];
 
+	private Camera camera;
 
 	public bool debug = false;
 	public int version = 0;
@@ -65,6 +66,7 @@ public class LightingManager2D : LightingMonoBehaviour {
 	}
 
 	public void Initialize () {
+
 		instance = this;
 
 		transform.position = Vector3.zero;
@@ -141,21 +143,18 @@ public class LightingManager2D : LightingMonoBehaviour {
 	}
 
 	void LateUpdate() {
-		if (Lighting2D.disable) {
-			return;
-		}
-
-		Camera camera = Buffers.Get().GetCamera();
-
+		
 		UpdateInternal();
 		
-		if (Lighting2D.Profile.qualitySettings.updateMethod == LightingSettings.UpdateMethod.LateUpdate) {
+		camera = Buffers.Get().GetCamera();
+		
+		if (Lighting2D.Profile.qualitySettings.updateMethod == UpdateMethod.LateUpdate) {
 			RenderLoop();
-			
 			camera.enabled = false;
 		} else {
 			camera.enabled = true;
 		}
+		
 	}
 
 	public void SetupProfile() {
@@ -172,7 +171,8 @@ public class LightingManager2D : LightingMonoBehaviour {
 		Lighting2D.materials.Reset();
 	}
 
-	public void UpdateInternal() {
+	public void UpdateInternal() 
+	{
 		if (Lighting2D.disable) {
 			return;
 		}
@@ -190,6 +190,7 @@ public class LightingManager2D : LightingMonoBehaviour {
 		AtlasSystem.Manager.Update();
 	}
 
+	// ReSharper disable Unity.PerformanceAnalysis
 	public void UpdateLoop() {
 		// Colliders
 

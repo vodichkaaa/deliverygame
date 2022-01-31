@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6647965054403582094
+--- !u!1 &95593013
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,71 +8,72 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6647965054403582095}
-  - component: {fileID: 6647965054403582092}
+  - component: {fileID: 95593014}
+  - component: {fileID: 95593015}
   m_Layer: 0
-  m_Name: CarLight_Left
+  m_Name: Head Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &6647965054403582095
+--- !u!4 &95593014
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6647965054403582094}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3, y: 5.89, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_GameObject: {fileID: 95593013}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 6.75, z: 0.058}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6647965055111204156}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6647965054403582092
+--- !u!114 &95593015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6647965054403582094}
+  m_GameObject: {fileID: 95593013}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 85a34663ca705a54eac3205e225a6d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.338
-  m_Color: {r: 1, g: 0.8850236, b: 0.6462264, a: 1}
-  m_Intensity: 3.27
-  m_LightVolumeOpacity: 0.012
-  m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 0
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 1
-  m_ShadowVolumeIntensity: 1
-  m_PointLightInnerAngle: 27
-  m_PointLightOuterAngle: 70
-  m_PointLightInnerRadius: 2
-  m_PointLightOuterRadius: 4.0633082
-  m_PointLightDistance: 3
-  m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
---- !u!1 &6647965054566366050
+  lightPresetId: 0
+  eventPresetId: 0
+  nightLayer: 0
+  color: {r: 1.9766746, g: 1.7489947, b: 1.2832861, a: 1}
+  size: 6
+  coreSize: 0.1
+  spotAngle: 103
+  outerAngle: 55
+  maskTranslucency: 0
+  maskTranslucencyIntensity: 0.05
+  litMode: 0
+  applyRotation: 1
+  textureSize: 3
+  meshMode:
+    enable: 0
+    alpha: 0.5
+    shader: 0
+    materials:
+    - {fileID: 0}
+    sortingLayer:
+      name: Default
+      Order: 0
+  bumpMap:
+    intensity: 1
+    depth: 12.25
+  whenInsideCollider: 1
+  lightSprite: 1
+  sprite: {fileID: 21300000, guid: 5a595a2d861adc14a8244c0cc0de960a, type: 3}
+  spriteFlipX: 0
+  spriteFlipY: 0
+--- !u!1 &521354038
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80,142 +81,68 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6647965054566366051}
-  - component: {fileID: 6647965054566366048}
+  - component: {fileID: 521354039}
+  - component: {fileID: 521354040}
   m_Layer: 0
-  m_Name: CarLight_Right
+  m_Name: Rear Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &6647965054566366051
+--- !u!4 &521354039
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6647965054566366050}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.32, y: 5.9, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_GameObject: {fileID: 521354038}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
+  m_LocalPosition: {x: 0.39, y: -3.09, z: -0.45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6647965055111204156}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6647965054566366048
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
+--- !u!114 &521354040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6647965054566366050}
+  m_GameObject: {fileID: 521354038}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Script: {fileID: 11500000, guid: d62ac029b1017974ead8b6ad01623c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.338
-  m_Color: {r: 1, g: 0.8850236, b: 0.6462264, a: 1}
-  m_Intensity: 3.27
-  m_LightVolumeOpacity: 0.012
-  m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 0
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 1
-  m_ShadowVolumeIntensity: 1
-  m_PointLightInnerAngle: 27
-  m_PointLightOuterAngle: 70
-  m_PointLightInnerRadius: 2
-  m_PointLightOuterRadius: 4.0633082
-  m_PointLightDistance: 3
-  m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
---- !u!1 &6647965054665011877
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6647965054665011898}
-  - component: {fileID: 6647965054665011899}
-  m_Layer: 0
-  m_Name: CarBackLight_Left
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6647965054665011898
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6647965054665011877}
-  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: -1.05, y: -1.6600001, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6647965055111204156}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!114 &6647965054665011899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6647965054665011877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.525
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 7.46
-  m_LightVolumeOpacity: 0.054
-  m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 0
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 0
-  m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 100
-  m_PointLightOuterAngle: 100
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 0.5
-  m_PointLightDistance: 3
-  m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
+  nightLayer: 0
+  type: 0
+  spriteMode: 0
+  sprite: {fileID: 21300000, guid: 650d7864236af054ca664e43c4feeef8, type: 3}
+  color: {r: 1, g: 0, b: 0, a: 1}
+  flipX: 0
+  flipY: 0
+  lightSpriteTransform:
+    applyRotation: 1
+    scale: {x: 4, y: 4}
+    rotation: 0
+    position: {x: 0, y: 0}
+  lightSpriteShape:
+    update: 0
+  meshMode:
+    enable: 0
+    alpha: 0.5
+    shader: 0
+    materials:
+    - {fileID: 0}
+    sortingLayer:
+      name: Default
+      Order: 0
+  glowMode:
+    enable: 0
+    glowSize: 1
+    glowIterations: 1
 --- !u!1 &6647965055111204159
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,14 +155,15 @@ GameObject:
   - component: {fileID: 6647965055111204157}
   - component: {fileID: 6647965055111204146}
   - component: {fileID: 556489679}
-  - component: {fileID: 8468817539453266737}
+  - component: {fileID: 1390331545598406949}
+  - component: {fileID: 8366074326091018218}
   m_Layer: 0
   m_Name: YellowCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 0
 --- !u!4 &6647965055111204156
 Transform:
   m_ObjectHideFlags: 0
@@ -247,10 +175,8 @@ Transform:
   m_LocalPosition: {x: 0.59, y: -1.56, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
-  - {fileID: 6647965054403582095}
-  - {fileID: 6647965054566366051}
-  - {fileID: 6647965054665011898}
-  - {fileID: 6647965055322993962}
+  - {fileID: 95593014}
+  - {fileID: 521354039}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -321,7 +247,7 @@ MonoBehaviour:
   name: Yellow Car
   acceleration: 30
   steering: 20
-  price: 1250
+  price: 2500
   isPurshared: 0
 --- !u!61 &556489679
 BoxCollider2D:
@@ -336,20 +262,20 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.009565353, y: 2.2096105}
+  m_Offset: {x: -0.0011271238, y: 2.2096105}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.49785528, y: 0.24126342}
-    oldSize: {x: 4.46, y: 8.54}
+    oldSize: {x: 4.4600005, y: 8.552509}
     newSize: {x: 4.46, y: 8.54}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.46, y: 8.54}
+  m_Size: {x: 4.002776, y: 8.54}
   m_EdgeRadius: 0
---- !u!114 &8468817539453266737
+--- !u!114 &1390331545598406949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -358,106 +284,83 @@ MonoBehaviour:
   m_GameObject: {fileID: 6647965055111204159}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a4ab6ba76a19a947b8fd15e8cf78623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 00000000
-  m_ShapePath:
-  - {x: -1.6977755, y: -1.4360044, z: 0}
-  - {x: -0.86843395, y: -1.9371364, z: 0}
-  - {x: 0.99542654, y: -1.9412193, z: 0}
-  - {x: 1.5521116, y: -1.4411662, z: 0}
-  - {x: 2.02435, y: -0.49732542, z: 0}
-  - {x: 1.7960457, y: 0.9497359, z: 0}
-  - {x: 1.7204729, y: 3.5404017, z: 0}
-  - {x: 1.8644199, y: 5.342175, z: 0}
-  - {x: 1.1866641, y: 5.6828136, z: 0}
-  - {x: 0.8523122, y: 6.293888, z: 0}
-  - {x: 0.29546595, y: 6.4450374, z: 0}
-  - {x: -0.3311866, y: 6.455984, z: 0}
-  - {x: -0.8504736, y: 6.2571907, z: 0}
-  - {x: -1.1440783, y: 5.7079973, z: 0}
-  - {x: -1.8521929, y: 5.4058695, z: 0}
-  - {x: -1.6680095, y: 3.4626749, z: 0}
-  - {x: -1.6671407, y: 0.87641263, z: 0}
-  - {x: -2.0084445, y: -0.5673108, z: 0}
-  m_ShapePathHash: -2017684737
-  m_Mesh: {fileID: 0}
-  m_InstanceId: -12476
---- !u!1 &6647965055322993941
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6647965055322993962}
-  - component: {fileID: 6647965055322993963}
-  m_Layer: 0
-  m_Name: CarBackLight_Right
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6647965055322993962
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6647965055322993941}
-  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 1.11, y: -1.6600001, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6647965055111204156}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!114 &6647965055322993963
+  shadowLayer: 0
+  maskLayer: 0
+  shadowType: 2
+  maskType: 1
+  shadowDistance: 3
+  shadowTranslucency: 0
+  mainShape:
+    shadowType: 2
+    maskType: 1
+    transform: {fileID: 6647965055111204156}
+    height: 3
+  shapes:
+  - shadowType: 2
+    maskType: 1
+    transform: {fileID: 6647965055111204156}
+    height: 3
+  - shadowType: 2
+    maskType: 1
+    transform: {fileID: 95593014}
+    height: 3
+  - shadowType: 2
+    maskType: 1
+    transform: {fileID: 521354039}
+    height: 3
+  normalMapMode:
+    textureType: 0
+    texture: {fileID: 2800000, guid: 3301a2ec62b0a5f4d91205c550f98611, type: 3}
+    sprite: {fileID: 0}
+  applyToChildren: 1
+--- !u!114 &8366074326091018218
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6647965055322993941}
+  m_GameObject: {fileID: 6647965055111204159}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 5783dbbad6a59184fa58aa75d79bcc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.525
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 7.46
-  m_LightVolumeOpacity: 0.054
-  m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 0
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 0
-  m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 100
-  m_PointLightOuterAngle: 100
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 0.5
-  m_PointLightDistance: 3
-  m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
+  shadowType: 1
+  shadowLayer: 0
+  shadowDistance: 0
+  shadowTranslucency: 0
+  maskType: 1
+  maskEffect: 0
+  maskPivot: 2
+  maskLayer: 0
+  maskTranslucency: 1
+  bumpMapMode:
+    type: 0
+    textureType: 0
+    texture: {fileID: 0}
+    sprite: {fileID: 0}
+    invertX: 0
+    invertY: 0
+    depth: 1
+    spriteRenderer: {fileID: 6647965055111204157}
+  applyToChildren: 0
+  usingEvents: 0
+  mainShape:
+    shadowType: 1
+    maskType: 1
+    maskPivot: 2
+    shadowDistance: 0
+    shadowTranslucency: 0
+    maskTranslucency: 1
+    transform: {fileID: 6647965055111204156}
+  shapes:
+  - shadowType: 1
+    maskType: 1
+    maskPivot: 2
+    shadowDistance: 0
+    shadowTranslucency: 0
+    maskTranslucency: 1
+    transform: {fileID: 6647965055111204156}

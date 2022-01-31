@@ -958,12 +958,11 @@ namespace Polygon2DTriangulation
 	private List<SplitComplexPolygonNode> mConnected = new List<SplitComplexPolygonNode>();
 	private Point2D mPosition = null;
 
-	public int NumConnected { get { return mConnected.Count; } }
-	public Point2D Position { get { return mPosition; } set { mPosition = value; } }
-	public SplitComplexPolygonNode this[int index]
-	{
-	get { return mConnected[index]; }
+	public int NumConnected => mConnected.Count;
+	public Point2D Position { get => mPosition;
+		set => mPosition = value;
 	}
+	public SplitComplexPolygonNode this[int index] => mConnected[index];
 
 
 	public SplitComplexPolygonNode()
@@ -1397,26 +1396,34 @@ namespace Polygon2DTriangulation
 	private string mName = "";
 	public new TriangulationPoint this[int index]
 	{
-	get { return mPoints[index] as TriangulationPoint; }
-	set { mPoints[index] = value; }
+	get => mPoints[index] as TriangulationPoint;
+	set => mPoints[index] = value;
 	}
-	public string Name { get { return mName; } set { mName = value; } }
+	public string Name { get => mName;
+		set => mName = value;
+	}
 	public IList<DelaunayTriangle> Triangles
 	{
-	get { throw new NotImplementedException("PolyHole.Triangles should never get called");}
+	get => throw new NotImplementedException("PolyHole.Triangles should never get called");
 	private set { }
 	}
-	public TriangulationMode TriangulationMode { get { return mParent.TriangulationMode; } }
-	public string FileName { get { return mParent.FileName; } set { } }
-	public bool DisplayFlipX { get { return mParent.DisplayFlipX; } set { } }
-	public bool DisplayFlipY { get { return mParent.DisplayFlipY; } set { } }
-	public float DisplayRotate { get { return mParent.DisplayRotate; } set { } }
-	public double Precision { get { return mParent.Precision; } set { } }
-	public double MinX { get { return mBoundingBox.MinX; } }
-	public double MaxX { get { return mBoundingBox.MaxX; } }
-	public double MinY { get { return mBoundingBox.MinY; } }
-	public double MaxY { get { return mBoundingBox.MaxY; } }
-	public Rect2D Bounds { get { return mBoundingBox; } }
+	public TriangulationMode TriangulationMode => mParent.TriangulationMode;
+	public string FileName { get => mParent.FileName;
+		set { } }
+	public bool DisplayFlipX { get => mParent.DisplayFlipX;
+		set { } }
+	public bool DisplayFlipY { get => mParent.DisplayFlipY;
+		set { } }
+	public float DisplayRotate { get => mParent.DisplayRotate;
+		set { } }
+	public double Precision { get => mParent.Precision;
+		set { } }
+	public double MinX => mBoundingBox.MinX;
+	public double MaxX => mBoundingBox.MaxX;
+	public double MinY => mBoundingBox.MinY;
+	public double MaxY => mBoundingBox.MaxY;
+	public Rect2D Bounds => mBoundingBox;
+
 	public Contour(ITriangulatable parent)
 	{
 	mParent = parent;
@@ -1784,30 +1791,32 @@ namespace Polygon2DTriangulation
 	public class Polygon : Point2DList, ITriangulatable, IEnumerable<TriangulationPoint>, IList<TriangulationPoint>
 	{
 	protected Dictionary<uint, TriangulationPoint> mPointMap = new Dictionary<uint, TriangulationPoint>();
-	public IList<TriangulationPoint> Points { get { return this; } }
+	public IList<TriangulationPoint> Points => this;
 	protected List<DelaunayTriangle> mTriangles;
-	public IList<DelaunayTriangle> Triangles { get { return mTriangles; } }
-	public TriangulationMode TriangulationMode { get { return TriangulationMode.Polygon; } }
+	public IList<DelaunayTriangle> Triangles => mTriangles;
+	public TriangulationMode TriangulationMode => TriangulationMode.Polygon;
 	public string FileName { get; set; }
 	public bool DisplayFlipX { get; set; }
 	public bool DisplayFlipY { get; set; }
 	public float DisplayRotate { get; set; }
 	private double mPrecision = TriangulationPoint.kVertexCodeDefaultPrecision;
-	public double Precision { get { return mPrecision; } set { mPrecision = value; } }
-	public double MinX { get { return mBoundingBox.MinX; } }
-	public double MaxX { get { return mBoundingBox.MaxX; } }
-	public double MinY { get { return mBoundingBox.MinY; } }
-	public double MaxY { get { return mBoundingBox.MaxY; } }
-	public Rect2D Bounds { get { return mBoundingBox; } }
+	public double Precision { get => mPrecision;
+		set => mPrecision = value;
+	}
+	public double MinX => mBoundingBox.MinX;
+	public double MaxX => mBoundingBox.MaxX;
+	public double MinY => mBoundingBox.MinY;
+	public double MaxY => mBoundingBox.MaxY;
+	public Rect2D Bounds => mBoundingBox;
 
 	public new TriangulationPoint this[int index]
 	{
-	get { return mPoints[index] as TriangulationPoint; }
-	set { mPoints[index] = value; }
+	get => mPoints[index] as TriangulationPoint;
+	set => mPoints[index] = value;
 	}
 
 	protected List<Polygon> mHoles;
-	public IList<Polygon> Holes { get { return mHoles; } }
+	public IList<Polygon> Holes => mHoles;
 	protected List<TriangulationPoint> mSteinerPoints;
 	protected PolygonPoint _last;
 
@@ -2068,6 +2077,6 @@ namespace Polygon2DTriangulation
 	_polygons.Add(p);
 	}
 
-	public IEnumerable<Polygon> Polygons { get { return _polygons; } }
+	public IEnumerable<Polygon> Polygons => _polygons;
 	}
 }

@@ -18,20 +18,11 @@ MonoBehaviour:
       sortingLayer:
         name: Default
         Order: 0
-      darknessColor: {r: 0.20397943, g: 0.21092546, b: 0.22653744, a: 0.10805249}
-      lightingResolution: 1
+      darknessColor: {r: 0.20398718, g: 0.21081308, b: 0.2264151, a: 1}
+      lightingResolution: 0.25
       dayLayers:
         list:
         - layer: 0
-          type: 0
-          sorting: 0
-        - layer: 1
-          type: 0
-          sorting: 0
-        - layer: 2
-          type: 0
-          sorting: 0
-        - layer: 3
           type: 0
           sorting: 0
       nightLayers:
@@ -48,7 +39,7 @@ MonoBehaviour:
           type: 0
           sorting: 6
           sortingIgnore: 0
-          shadowEffect: 0
+          shadowEffect: 2
           shadowEffectLayer: 0
           maskEffect: 0
           maskEffectDistance: 1
@@ -64,16 +55,16 @@ MonoBehaviour:
         - layerID: 0
   qualitySettings:
     HDR: 1
-    lightTextureSize: 1
-    lightEffectTextureSize: 1
+    lightTextureSize: 3
+    lightEffectTextureSize: 3
     lightFilterMode: 1
     updateMethod: 0
     coreAxis: 0
     projection: 0
   dayLightingSettings:
-    alpha: 0.21914947
-    direction: 223.2
-    height: 1
+    alpha: 0.0026143964
+    direction: 180.015
+    height: 0.97099304
     softness:
       enable: 1
       intensity: 0.43
@@ -84,7 +75,7 @@ MonoBehaviour:
     filterMode: 1
     useOnlyInPlay: 0
     sorting: 0
-    resolution: 1
+    resolution: 0
     sortingLayer:
       name: Default
       Order: 0

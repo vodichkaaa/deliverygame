@@ -25,7 +25,8 @@ public class CarMovement : MonoBehaviour, IMovement
     
     private const int AccelerationDebuff = 10;
     private const int SteeringDebuff = 10;
-    
+    private const int Sensitivity = 2;
+
     public event Action OnMovement = delegate {  };
 
     private CarMovement()
@@ -44,7 +45,6 @@ public class CarMovement : MonoBehaviour, IMovement
 
     private void Start() 
     {
-         Debug.Log("1");
         _rb = GetComponent<Rigidbody2D>();
         
         _character = GetComponentInChildren<Character>();
@@ -52,15 +52,10 @@ public class CarMovement : MonoBehaviour, IMovement
         _acceleration = _character.acceleration;
         _steering = _character.steering;
     }
-    
-    private void Update()
-    {
-        LineDebug();
-    }
 
     void FixedUpdate()
     {
-        _x = -CnInputManager.GetAxis("Horizontal");
+        _x = -CnInputManager.GetAxis("Horizontal") / Sensitivity;
         
         if (isGas && _y <= 1)
             _y += Time.deltaTime;
@@ -111,12 +106,6 @@ public class CarMovement : MonoBehaviour, IMovement
         float driftForce = Vector2.Dot(_rb.velocity, _rb.GetRelativeVector(_rightAngleFromForward.normalized));
         _relativeForce = _rightAngleFromForward.normalized * (-1.0f * (driftForce * 10.0f));
         _rb.AddForce(_rb.GetRelativeVector(_relativeForce));
-    }
-
-    private void LineDebug()
-    {
-        Debug.DrawLine(_rb.position, _rb.GetRelativePoint(_rightAngleFromForward), Color.green);
-        Debug.DrawLine(_rb.position, _rb.GetRelativePoint(_relativeForce), Color.red);
     }
 
     public void PointerGasDown() => isGas = true;

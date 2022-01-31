@@ -10,7 +10,7 @@ namespace Polygon2DTriangulation
 		public FixedArray3<TriangulationPoint> Points;
 		public FixedArray3<DelaunayTriangle> Neighbors;
 		private FixedBitArray3 mEdgeIsConstrained = new FixedBitArray3();
-		public FixedBitArray3 EdgeIsConstrained { get { return mEdgeIsConstrained; } }
+		public FixedBitArray3 EdgeIsConstrained => mEdgeIsConstrained;
 		public FixedBitArray3 EdgeIsDelaunay;
 		public bool IsInterior { get; set; }
 

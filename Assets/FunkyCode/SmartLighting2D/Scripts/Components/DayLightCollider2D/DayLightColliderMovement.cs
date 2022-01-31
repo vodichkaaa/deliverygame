@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+// ReSharper disable All
 
-public class DayLightingColliderTransform {
+public class DayLightingColliderTransform 
+{
 	public bool updateNeeded = false;
 
 	public Vector2 position = Vector2.zero;
@@ -20,65 +22,77 @@ public class DayLightingColliderTransform {
 
 	private DayLightColliderShape shape;
 
-	public void Reset() {
+	private Transform _transform = null;
+	private Vector2 scale2D = Vector2.zero;
+	private Vector2 position2D = Vector2.zero;
+	private float rotation2D = 0;
+
+	private SpriteRenderer spriteRenderer = null;
+	
+	private float timeSinceLastCalled;
+
+	private float delay = 0.1f;
+	
+	public void Reset() 
+	{
 		position = Vector2.zero;
 		rotation = 0;
 		scale = Vector3.zero;
 	}
 
-	public void SetShape(DayLightColliderShape shape) {
+	public void SetShape(DayLightColliderShape shape) 
+	{
 		this.shape = shape;
 	}
 
-	public void Update() {
+	public void Update() 
+	{
+		_transform = shape.transform;
+
+		scale2D = _transform.lossyScale;
+		position2D = _transform.position;
+		RotationController();
+
+		spriteRenderer = shape.spriteShape.GetSpriteRenderer();
+		
 		if (shape.transform == null) {
 			return;
 		}
 		
-		Transform transform = shape.transform;
-
-		Vector2 scale2D = transform.lossyScale;
-		Vector2 position2D = transform.position;
-		float rotation2D = transform.rotation.eulerAngles.z;
-
-		SpriteRenderer spriteRenderer = shape.spriteShape.GetSpriteRenderer();
-
 		updateNeeded = false;
-
-		if (position != position2D) {
-
+		
+		if (position != position2D) 
+		{
 			position = position2D;
-
-			// does not update shadow
 		}
-
-		if (sunDirection != Lighting2D.DayLightingSettings.direction) {
+		
+		if (sunDirection != Lighting2D.DayLightingSettings.direction) 
+		{
 			sunDirection = Lighting2D.DayLightingSettings.direction;
-
 			updateNeeded = true;
 		}
 
-		if (sunHeight != Lighting2D.DayLightingSettings.height) {
+		if (sunHeight != Lighting2D.DayLightingSettings.height) 
+		{
 			sunHeight = Lighting2D.DayLightingSettings.height;
-
 			updateNeeded = true;
 		}
 
-		if (sunSoftness != Lighting2D.DayLightingSettings.softness.intensity) {
+		if (sunSoftness != Lighting2D.DayLightingSettings.softness.intensity) 
+		{
 			sunSoftness = Lighting2D.DayLightingSettings.softness.intensity;
-
 			updateNeeded = true;
 		}
 				
-		if (scale != scale2D) {
+		if (scale != scale2D) 
+		{
 			scale = scale2D;
-
 			updateNeeded = true;
 		}
 
-		if (rotation != rotation2D) {
+		if (rotation != rotation2D) 
+		{
 			rotation = rotation2D;
-
 			updateNeeded = true;
 		}
 
@@ -86,11 +100,6 @@ public class DayLightingColliderTransform {
 			height = shape.height;
 
 			updateNeeded = true;
-		}
-
-		// Unnecesary check
-		if (shape.height < 0.01f) {
-			shape.height = 0.01f;
 		}
 
 		if (shape.shadowType == DayLightCollider2D.ShadowType.SpritePhysicsShape) {
@@ -103,35 +112,22 @@ public class DayLightingColliderTransform {
 					
 					shape.ResetLocal(); // World
 				}
-				
-				/* Sprite frame change
-				if (shape.GetOriginalSprite() != spriteRenderer.sprite) {
-					shape.SetOriginalSprite(spriteRenderer.sprite);
-					shape.SetAtlasSprite(null); // Only For Sprite Mask?
-
-					moved = true;
-					
-					shape.Reset(); // Local
-				}
-				*/
 			}
 		}
-
-		/* Sprite Frame Change
-		if (shape.maskType == LightingCollider2D.MaskType.Sprite) {
-			if (spriteRenderer != null && shape.GetOriginalSprite() != spriteRenderer.sprite) {
-				shape.SetOriginalSprite(spriteRenderer.sprite);
-				shape.SetAtlasSprite(null);
-
-				moved = true;
-			}
-		}
-		/*/
+		
 	}
+
+	private void RotationController()
+	{
+		timeSinceLastCalled += Time.deltaTime;
+		if (timeSinceLastCalled > delay)
+		{
+			rotation2D = _transform.rotation.eulerAngles.z;
+			timeSinceLastCalled = 0f;
+		}
+	}
+	
 }
-
-
-
 
 public class DayLightTilemapColliderTransform {
 	public bool moved = false;

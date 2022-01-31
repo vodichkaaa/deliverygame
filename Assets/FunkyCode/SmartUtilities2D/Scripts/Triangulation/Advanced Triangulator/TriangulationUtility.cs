@@ -212,12 +212,16 @@ namespace Polygon2DTriangulation
 	public class Point2D : IComparable<Point2D>
 	{
 		protected double mX = 0.0;
-		public virtual double X { get { return mX; } set { mX = value; } }
+		public virtual double X { get => mX;
+			set => mX = value;
+		}
 		protected double mY = 0.0;
-		public virtual double Y { get { return mY; } set { mY = value; } }
+		public virtual double Y { get => mY;
+			set => mY = value;
+		}
 
-		public float Xf { get { return (float)X; } }
-		public float Yf { get { return (float)Y; } }
+		public float Xf => (float)X;
+		public float Yf => (float)Y;
 
 		public Point2D()
 		{
@@ -377,7 +381,7 @@ namespace Polygon2DTriangulation
 
 		void IDisposable.Dispose() { }
 
-		Object IEnumerator.Current { get { return Current; } }
+		Object IEnumerator.Current => Current;
 
 		public Point2D Current
 		{
@@ -422,10 +426,11 @@ namespace Polygon2DTriangulation
 		protected WindingOrderType mWindingOrder = WindingOrderType.Unknown;
 		protected double mEpsilon = MathUtil.EPSILON;  
 
-		public Rect2D BoundingBox { get { return mBoundingBox; } }
+		public Rect2D BoundingBox => mBoundingBox;
+
 		public WindingOrderType WindingOrder
 		{
-			get { return mWindingOrder; }
+			get => mWindingOrder;
 			set {
 				if (mWindingOrder == WindingOrderType.Unknown)
 					mWindingOrder = CalculateWindingOrder();
@@ -437,14 +442,15 @@ namespace Polygon2DTriangulation
 				}
 			}
 		}
-		public double Epsilon { get { return mEpsilon; } }
+		public double Epsilon => mEpsilon;
+
 		public Point2D this[int index]
 		{
-			get { return mPoints[index]; }
-			set { mPoints[index] = value; }
+			get => mPoints[index];
+			set => mPoints[index] = value;
 		}
-		public int Count { get { return mPoints.Count; } }
-		public virtual bool IsReadOnly { get { return false; } }
+		public int Count => mPoints.Count;
+		public virtual bool IsReadOnly => false;
 
 		public Point2DList()
 		{
@@ -1044,18 +1050,34 @@ namespace Polygon2DTriangulation
 		private double mMinY; 
 		private double mMaxY;
 
-		public double MinX { get { return mMinX; } set { mMinX = value; } }
-		public double MaxX { get { return mMaxX; } set { mMaxX = value; } }
-		public double MinY { get { return mMinY; } set { mMinY = value; } }
-		public double MaxY { get { return mMaxY; } set { mMaxY = value; } }
-		public double Left { get { return mMinX; } set { mMinX = value; } }
-		public double Right { get { return mMaxX; } set { mMaxX = value; } }
-		public double Top { get { return mMaxY; } set { mMaxY = value; } }
-		public double Bottom { get { return mMinY; } set { mMinY = value; } }
+		public double MinX { get => mMinX;
+			set => mMinX = value;
+		}
+		public double MaxX { get => mMaxX;
+			set => mMaxX = value;
+		}
+		public double MinY { get => mMinY;
+			set => mMinY = value;
+		}
+		public double MaxY { get => mMaxY;
+			set => mMaxY = value;
+		}
+		public double Left { get => mMinX;
+			set => mMinX = value;
+		}
+		public double Right { get => mMaxX;
+			set => mMaxX = value;
+		}
+		public double Top { get => mMaxY;
+			set => mMaxY = value;
+		}
+		public double Bottom { get => mMinY;
+			set => mMinY = value;
+		}
 
-		public double Width { get { return (Right - Left); } }
-		public double Height { get { return (Top - Bottom); } }
-		public bool Empty { get { return (Left == Right) || (Top == Bottom); } }
+		public double Width => (Right - Left);
+		public double Height => (Top - Bottom);
+		public bool Empty => (Left == Right) || (Top == Bottom);
 
 		public Rect2D()
 		{

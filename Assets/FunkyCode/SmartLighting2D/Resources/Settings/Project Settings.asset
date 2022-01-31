@@ -24,8 +24,8 @@ MonoBehaviour:
     enabled: 0
     chunkSize: 10
   colorSpace: 0
-  managerInstance: 0
+  managerInstance: 2
   managerInternal: 0
-  MaxLightSize: 100
+  MaxLightSize: 10
   disable: 0
   profile: {fileID: 11400000, guid: 093468b9f9c33c64db50f4575dbe5827, type: 2}

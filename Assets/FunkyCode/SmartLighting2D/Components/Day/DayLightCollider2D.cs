@@ -31,6 +31,8 @@ public class DayLightCollider2D : MonoBehaviour {
 
 	public static List<DayLightCollider2D> List = new List<DayLightCollider2D>();
 
+	private static DayLightCollider2D _collider;
+
 	public void OnEnable() {
 		List.Add(this);
 
@@ -67,9 +69,15 @@ public class DayLightCollider2D : MonoBehaviour {
 	}
 
 	public static void ForceUpdateAll() {
-		foreach(DayLightCollider2D collider in List) {
-			collider.ForceUpdate();
+
+		for (int i = 0; i <= List.Count; i++)
+		{
+			_collider.ForceUpdate();
 		}
+		
+		/*foreach(DayLightCollider2D collider in List) {
+			collider.ForceUpdate();
+		}*/
 	}
 
 	public void ForceUpdate() {
